@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <title>SuperGuaxinim.com - Login</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width-device-width, initial-scale=1.0, maximun-scale=1.0">
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+		 <style type="text/css">
+             body{
+    background-color: #414244;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav ul {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: #141418;
+    z-index: 100;
+    position: fixed;
+    margin-top: -115px;
+}
+
+nav .logo {
+    color: #FF8C00;
+    font-size: 30px;
+    line-height: 80px;
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+.logo {
+    position:relative;
+    top: 0px;
+    left: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+nav ul {
+    float: right;
+    position: relative;
+    margin-top: 0px;
+    line-height: 80px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+    line-height: normal;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold; 
+}
+
+nav ul li a:hover {
+    background: black;
+    border-radius: 25px;
+}
+
+a {
+    padding: 10px
+}
+
+img {
+    padding-top: 15px;
+    padding-right: 5px;
+}
+
+b1 {
+    color: #1ACEF5;
+}
+
+    form{
+        background-color: #414244;
+        max-width: 400px;
+        padding: 0px;
+        position: relative;
+        margin-top: 115px;
+        margin-left: 35%;
+        height: 300px;
+    }
+
+    form h3{
+        text-align: center;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    form input[type=text],
+    form input[type=password]{
+        width: 97%;
+        height: 45px;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        margin: 10px 0;
+    }
+
+    form input[type=submit]{
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        background: #1e1e22;
+        color: white;
+        border: 0;
+        border-radius: 20px;
+        transition: 1s;
+    }
+
+    form input[type=submit]:hover{
+        background-color: black;
+
+    }
+    form input[type=text]:focus{
+        outline: 0;
+    }
+    form input[type=password]:focus{
+        outline: 0;
+    }
+
+.cadastro{
+    margin-left: 47%;
+    color: #1e1e22;
+    top: -50px;
+    position: relative;
+}
+
+.rodape{
+    background-color: #141418;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    position: relative; 
+    top: 160px;
+}
+
+.sec_rod{
+    border:1px solid #141418;
+    margin: 10px;
+}
+
+.img_rod{
+    width: inherit;
+}
+
+.info{
+    color: gray;
+}
+
+#rodapelogo{
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    position: relative;
+}
+
+.rodapemesage{
+    position: relative;
+    margin-left: -12px;
+}
+
+.rodapemesage{
+    position: relative;
+    margin-left: -12px;
+}
+
+.rodapemesage:link {
+    color: white;
+    text-decoration: none;
+}
+
+.rodapemesage:visited{
+    color: white;
+}
+
+.rodapemesage:hover{
+    text-decoration: underline;
+    color: gray;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn {
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #242323;
+        top: -20px;
+        left: -100%;
+        text-align: center;
+        z-index: 1000;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+ 
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+form{
+        background-color: #414244;
+        max-width: 400px;
+        padding: 0px;
+        position: relative;
+        margin-top: 115px;
+        margin-left: 5%;
+        height: 300px;
+    }
+
+.cadastro{
+    margin-left: 40%;
+    color: #1e1e22;
+    top: -50px;
+    position: relative;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav> 
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <label class="logo">
+            <a href="/menu"><img src="img/guaxilogo.png" alt="logoguaxi" width="215px" /></a>
+        </label>
+            
+            <ul>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/Ofertas">Ofertas</a></li>
+                <li><a href="/teste">Produtos</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/trabalheconosco">Trabalhe<b1> Conosco</b1></a></li>
+            </ul>
+        </nav>
+
+    <form>
+        <h3>Faça Login</h3>
+        <input id="email" type="text" name="email" placeholder="Seu e-mail..."/>
+        <input id="password" type="password" name="senha" placeholder="Sua senha..."/>
+        <input type="submit" name="acao" placeholder="Enviar"/>
+    </form>
+    <script>
+        var email = document.getElementById('email');   
+        var password = document.getElementById('password');
+
+        email.addEventListener('focus',()=>{
+                email.style.borderColor = "#4A5F6A";
+        });
+        email.addEventListener('blur',()=>{
+                email.style.borderColor = "#ccc";
+        });
+        password.addEventListener('focus',()=>{
+                password.style.borderColor = "#4A5F6A";
+        });
+        password.addEventListener('blur',()=>{
+                password.style.borderColor = "#ccc";
+        });
+
+    </script>
+
+    <a class="cadastro" href="cadastro.html">Cadastre-se</a>
+
+    <footer class="rodape">
+        <article class="sec_rod">
+            <img id="rodapelogo" src="img/guaxini.png" class="img_rod">
+        </article>
+         <article class="sec_rod">
+            <p class="info">INFORMAÇÕES</p>
+            SAC: 85 89228514
+            <p>sac@supermercadoguaxi.com.br</p>
+            <a class="rodapemesage" href="https://www.google.com.br/maps/@-3.7258819,-38.5579576,3a,75y,347.19h,90.96t/data=!3m6!1e1!3m4!1sA0n7JojLeLZEiLpic1oMUg!2e0!7i16384!8i8192"> Ave. Sargento Hermínio Sampaio 2000</a>
+        </article>
+         <article class="sec_rod">
+            <p class="info">SIGA-NOS</p>
+            <p><a href="https://www.instagram.com"><img id="instagram" src="img/insta.png"></a>
+            <a href="https://www.facebook.com"><img id="facebook" src="img/face.png"></a></p>
+        </article>
+</footer>
+</body>
+</html>
