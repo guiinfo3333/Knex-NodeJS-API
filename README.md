@@ -9,3 +9,8 @@ npx knex seed:make 001_funcionario
 npx knex seed:run //rodando as seeds
 
 npx knex seed:run --specific 0.02project.js //roda seed especifica
+
+
+yarn add eslint -D //roda eslint
+yarn run eslint --init //inicia eslint
+yarn add tsconfig-paths -D //roda o path para melhorar as importacoes

@@ -1,5 +1,8 @@
+import { Knex } from 'knex';
 
-exports.up = knex => knex.schema.createTable('funcionario',table =>{
+export async function up(knex: Knex) {
+
+    return knex.schema.createTable('funcionario', table => {
         table.increments('id')
         table.text('username').notNullable()
         table.text('login').notNullable()
@@ -7,7 +10,10 @@ exports.up = knex => knex.schema.createTable('funcionario',table =>{
         table.timestamp('created_at').defaultTo(knex.fn.now())
         table.timestamp('updated_at').defaultTo(knex.fn.now())
     })
-  
 
-exports.down = knex => knex.schema.dropTable('funcionario')
-  
+}
+
+export async function down(knex: Knex) {
+    return knex.schema.dropTable('funcionario');
+
+}
