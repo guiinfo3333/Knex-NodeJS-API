@@ -14,3 +14,8 @@ npx knex seed:run --specific 0.02project.js //roda seed especifica
 yarn add eslint -D //roda eslint
 yarn run eslint --init //inicia eslint
 yarn add tsconfig-paths -D //roda o path para melhorar as importacoes
+
+
+heroku pg:psql --app superguaxini   //entrando no pos
+
+heroku run bash
