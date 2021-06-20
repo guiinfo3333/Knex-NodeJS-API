@@ -1,8 +1,12 @@
 import express from 'express'
 import routes from './routes';
 import { Request, Response, NextFunction } from 'express';
-import { Produtos } from '@models/produtos';
+import { Produtos } from './models/produtos';
 import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 
 
 const app = express()

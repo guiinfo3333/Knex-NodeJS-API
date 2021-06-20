@@ -1,15 +1,21 @@
+console.log(process.env.HOST)
+console.log(process.env.DATABASE)
+console.log(process.env.USUARIO)
+console.log(process.env.PASSWORD)
+console.log(process.env.PORT)
 module.exports = {
   client: 'pg',
   connection: {
-    user: 'postgres',
-    password: 'admin',
-    database: 'superguaxini'
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
   },
   migrations: {
-    directory: `${__dirname}/database/migrations`
+    directory: `${__dirname}/dist/database/migrations`
   },
   seeds: {
-    directory: `${__dirname}/database/seeds`
+    directory: `${__dirname}/dist/database/seeds`
   },
 
   useNullAsDefault: true,

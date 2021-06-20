@@ -1,4 +1,4 @@
-import knex from '@database/index'
+import knex from '../database/index'
 
 export class Produtos {
     id: number;

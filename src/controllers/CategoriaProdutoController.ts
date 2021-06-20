@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import knex from '@database/index'
+import knex from '../database/index'
 
 class CategoriaProdutoController {
 

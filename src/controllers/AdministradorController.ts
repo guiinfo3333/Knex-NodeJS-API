@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import knex from '@database/index'
-import { Administrador } from '@models/administrador';
+import knex from '../database/index'
+import { Administrador } from '../models/administrador';
 
 
 class AdministradorController {
