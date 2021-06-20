@@ -4,10 +4,12 @@ import AdministradorController from './controllers/AdministradorController';
 import FuncionarioController from './controllers/FuncionarioController'
 import CategoriaController from './controllers/CategoriaProdutoController'
 import ProdutosController from './controllers/ProdutoController.'
+import ContatoController from './controllers/ContatoController'
 const administradorController = new AdministradorController();
 const funcionarioController = new FuncionarioController();
 const categoriaController = new CategoriaController();
 const produtosController = new ProdutosController();
+const contatoController = new ContatoController();
 const routes = express.Router();
 
 ///fucionario
@@ -30,9 +32,14 @@ routes.put('/categoriaproduto/:id', categoriaController.update)
 routes.delete('/categoriaproduto/:id', categoriaController.delete)
 
 //produtos
-routes.get('/produtos', produtosController.index)
+routes.get('/produtos', produtosController.Index)
+routes.get('/produtos/:id', produtosController.selectId)
 routes.post('/produtos', produtosController.create)
 routes.put('/produtos/:id', produtosController.update)
 routes.delete('/produtos/:id', produtosController.delete)
+
+//produtos
+routes.post('/contato', contatoController.create)
+
 
 export default routes;

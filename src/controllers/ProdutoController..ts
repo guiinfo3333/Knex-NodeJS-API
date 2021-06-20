@@ -3,18 +3,31 @@ import knex from '@database/index'
 
 class ProdutoController {
 
-    async index(req: Request, res: Response, next: NextFunction) {
+    async Index(req: Request, res: Response, next: NextFunction) {
         try {
-            const { id, page = 1 } = req.query;
+            const result = await knex('produtos')
+            return result
+        }
+        catch (err) {
+            next(err);
+        }
+
+    }
+
+    async selectId(req: Request, res: Response, next: NextFunction) {
+        try {
+            const { id } = req.params
+            const { page = 1 } = req.query;
             const query = knex('produtos')
-                .limit(5)
-                .offset((Number(page) - 1) * 5)
+                .limit(15)
+                .offset((Number(page) - 1) * 15)
 
             if (id) {
                 console.log(id);
-                query.where({ 'produtos.id': id })
+                query.where({ 'categoriaproduto.id': id })
                     .join('categoriaproduto', 'categoriaproduto.id', '=', 'produtos.categoria_id')
-                    .select('produtos.*', 'categoriaproduto.nome')  //tudo de produtos e categoria o nome
+                    .select('produtos.*')
+                // .select('produtos.*', 'categoriaproduto.nome')  //tudo de produtos e categoria o nome
             }
 
             const [count] = await knex('produtos').count()

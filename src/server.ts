@@ -1,6 +1,7 @@
 import express from 'express'
 import routes from './routes';
 import { Request, Response, NextFunction } from 'express';
+import { Produtos } from '@models/produtos';
 import path from 'path';
 
 
@@ -9,20 +10,29 @@ app.set('view engine', 'ejs');
 app.use(express.json())
 app.use(routes)
 app.use(express.static(path.join(__dirname, "..", "public")))
-app.get('/alimentos', function (req, res) {
-    res.render('alimentos.ejs', {});
+
+
+app.get('/alimentos', async function (req, res) {
+    const produto = new Produtos()
+    const produtolis = await produto.SelectIdCategoria(1)
+    res.render('alimentos.ejs', { produtos: produtolis });
 });
-app.get('/bebidas', function (req, res) {
-    res.render('bebidas.ejs', {});
+app.get('/bebidas', async function (req, res) {
+    const produto = new Produtos()
+    const produtolis = await produto.SelectIdCategoria(2)
+    res.render('bebidas.ejs', { produtos: produtolis });
 });
-app.get('/cadastro', function (req, res) {
+app.get('/cadastro', async function (req, res) {
+
     res.render('cadastro.ejs', {});
 });
 app.get('/contato', function (req, res) {
     res.render('contato.ejs', {});
 });
-app.get('/ferramentas', function (req, res) {
-    res.render('ferramentas.ejs', {});
+app.get('/ferramentas', async function (req, res) {
+    const produto = new Produtos()
+    const produtolis = await produto.SelectIdCategoria(4)
+    res.render('ferramentas.ejs', { produtos: produtolis });
 });
 app.get('/frescos', function (req, res) {
     res.render('frescos.ejs', {});
@@ -33,8 +43,10 @@ app.get('/frutasverduras', function (req, res) {
 app.get('/frescos', function (req, res) {
     res.render('frescos.ejs', {});
 });
-app.get('/limpeza', function (req, res) {
-    res.render('limpeza.ejs', {});
+app.get('/limpeza', async function (req, res) {
+    const produto = new Produtos()
+    const produtolis = await produto.SelectIdCategoria(3)
+    res.render('limpeza.ejs', { produtos: produtolis });
 });
 app.get('/login', function (req, res) {
     res.render('login.ejs', {});
@@ -42,8 +54,10 @@ app.get('/login', function (req, res) {
 app.get('/menu', function (req, res) {
     res.render('menu.ejs', {});
 });
-app.get('/teste', function (req, res) {
-    res.render('teste.ejs', {});
+app.get('/teste', async function (req, res) {
+    const produto = new Produtos()
+    const produtolis = await produto.Index()
+    res.render('teste.ejs', { produtos: produtolis });
 });
 app.get('/ofertas', function (req, res) {
     res.render('Ofertas.ejs', {});
@@ -51,13 +65,6 @@ app.get('/ofertas', function (req, res) {
 app.get('/trabalheconosco', function (req, res) {
     res.render('trabalhe.ejs', {});
 });
-
-
-
-
-
-
-
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     const error = new Error('Not Found')
