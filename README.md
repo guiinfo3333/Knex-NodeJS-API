@@ -17,5 +17,6 @@ yarn add tsconfig-paths -D //roda o path para melhorar as importacoes
 
 
 heroku pg:psql --app superguaxini   //entrando no pos
+heroku logs --tail  //log do que ta acontecendo no heroku
 
 heroku run bash

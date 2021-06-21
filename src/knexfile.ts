@@ -12,10 +12,10 @@ module.exports = {
     database: process.env.DATABASE
   },
   migrations: {
-    directory: `${__dirname}/dist/database/migrations`
+    directory: `dist/database/migrations`
   },
   seeds: {
-    directory: `${__dirname}/dist/database/seeds`
+    directory: `dist/database/seeds`
   },
 
   useNullAsDefault: true,
