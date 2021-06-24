@@ -14,7 +14,7 @@ const connection = knex({
     connection: {
         user: process.env.USUARIOBANCO,
         password: process.env.PASSWORD,
-        host: process.env.HOST,
+        // host: process.env.HOST,
         database: process.env.DATABASE,
     },
     useNullAsDefault: true,
