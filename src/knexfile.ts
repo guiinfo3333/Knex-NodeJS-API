@@ -6,16 +6,16 @@ console.log(process.env.PORT)
 module.exports = {
   client: 'pg',
   connection: {
-    host: process.env.HOST,
-    user: process.env.USER,
+    // host: process.env.HOST,
+    user: process.env.USUARIOBANCO,
     password: process.env.PASSWORD,
     database: process.env.DATABASE
   },
   migrations: {
-    directory: `dist/database/migrations`
+    directory: `database/migrations`
   },
   seeds: {
-    directory: `dist/database/seeds`
+    directory: `database/seeds`
   },
 
   useNullAsDefault: true,
