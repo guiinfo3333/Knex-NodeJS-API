@@ -78,5 +78,5 @@ app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
     res.json({ error: error.message })
 })
 
-app.listen(process.env.PORT || 5000, () => console.log('Server is running'))
+app.listen(5000, () => console.log('Server is running'))
 
