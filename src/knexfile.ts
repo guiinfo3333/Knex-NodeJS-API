@@ -9,7 +9,8 @@ module.exports = {
   connection: {
     user: process.env.USUARIOBANCO,
     password: process.env.PASSWORD,
-    // host: process.env.HOST,
+    port: process.env.PORT,
+    host: process.env.HOST,
     database: process.env.DATABASE,
   },
   migrations: {
