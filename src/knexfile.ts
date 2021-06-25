@@ -1,9 +1,8 @@
-console.log(process.env.HOST)
-console.log(process.env.DATABASE)
-console.log(process.env.USUARIO)
-console.log(process.env.PASSWORD)
-console.log(process.env.PORT)
-console.log("DENTROD DO KNX", process.env.DATABASE_URL)
+console.log("DATABASE", process.env.DATABASE)
+console.log("PASSWORD", process.env.PASSWORD)
+console.log("PORT", process.env.PORT)
+console.log("PORT", process.env.HOST)
+console.log("Dentro do Index", process.env.DATABASE_URL)
 module.exports = {
   client: 'pg',
   connection: {
